@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANFPFyXRa1uNFkkMYixmQEgTMx4D7R0dAb0a9SIrlhuPI753zoAV2kgi1phz8pymMdN7YGDmRd+HTUPIrm+hjQ==",
+  "dgSpecHash": "S4RL4WpwrnZUpMBAl40Lk6ShhgwgqDTK+Ca1bLb8uf34pQ4UZwittF9VvxEkebvzDJHLO5vyhc5qP7Wz2sAATw==",
   "success": true,
-  "projectFilePath": "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/PdfTest.csproj",
+  "projectFilePath": "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/PdfTest.csproj",
   "expectedPackageFiles": [
     "/Users/scuser/.nuget/packages/bouncycastle/1.8.9/bouncycastle.1.8.9.nupkg.sha512",
     "/Users/scuser/.nuget/packages/itextsharp/5.5.13.3/itextsharp.5.5.13.3.nupkg.sha512"

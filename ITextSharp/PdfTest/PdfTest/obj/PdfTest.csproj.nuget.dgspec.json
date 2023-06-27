@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/PdfTest.csproj": {}
+    "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/PdfTest.csproj": {}
   },
   "projects": {
-    "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/PdfTest.csproj": {
+    "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/PdfTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/PdfTest.csproj",
+        "projectUniqueName": "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/PdfTest.csproj",
         "projectName": "PdfTest",
-        "projectPath": "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/PdfTest.csproj",
+        "projectPath": "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/PdfTest.csproj",
         "packagesPath": "/Users/scuser/.nuget/packages/",
-        "outputPath": "/Users/scuser/Desktop/git/pdf plugins/PdfTest/PdfTest/obj/",
+        "outputPath": "/Users/scuser/Desktop/pdf/ITextSharp/ITextSharp/PdfTest/PdfTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/scuser/.nuget/NuGet/NuGet.Config"
