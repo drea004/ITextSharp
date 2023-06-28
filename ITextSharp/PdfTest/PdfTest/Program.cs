@@ -67,15 +67,17 @@ public class Program
 
         // Create a table with 3 columns
         PdfPTable table4 = new PdfPTable(1);
-        table4.WidthPercentage = 20;
+        table4.WidthPercentage = 25;
         table4.HorizontalAlignment = Element.ALIGN_LEFT; 
 
         // Add headers to the table
         table4.AddCell(GetHeaderCell("Bill To Info"));
 
         // Add custom rows to the table
-        table4.AddCell(GetCustomCell("Invoice Number:          10001", 7, true));
-        table4.AddCell(GetCustomCell("Invoice Date:          5/16/23", 7, true));
+        table4.AddCell(GetCustomCell("GLOBAL AGRI\n", 7, true));
+        table4.AddCell(GetCustomCell("527 GROVE AVE\n", 7, true));
+        table4.AddCell(GetCustomCell("Edison, New Jersey (201) 208-2005", 7, true));
+
 
         // Add the table to the document
         document.Add(table4);
@@ -91,21 +93,13 @@ public class Program
         boxCell.FixedHeight = 200f; // Adjust the box size as needed
         boxCell.Border = Rectangle.BOX;
 
-        // Create the content for the box using Paragraph
-        Paragraph content = new Paragraph("ITL JOLIET\n");
-        content.Alignment = Element.ALIGN_LEFT;
-
-        Paragraph content2 = new Paragraph("Term:     Net 30\n");
-
-        Paragraph content3 = new Paragraph("Order Number:     JOLIB100837\n");
-        content3.Alignment = Element.ALIGN_LEFT;
-
-
-
         // Add the content to the cell
-        boxCell.AddElement(content);
-        boxCell.AddElement(content2);
-        boxCell.AddElement(content3);
+        boxCell.AddElement(CreateParagraph("ITL JOLIET\n"));
+        boxCell.AddElement(CreateParagraph("Term:     Net 30\n"));
+        boxCell.AddElement(CreateParagraph("Order Number:     JOLIB100837\n"));
+        boxCell.AddElement(CreateParagraph("Customer Ref:\n"));
+        boxCell.AddElement(CreateParagraph("POs:\n"));
+
 
 
         // Add the box cell to the table
@@ -125,13 +119,12 @@ public class Program
         cell2.FixedHeight = 200f; // Adjust the box size as needed
         cell2.Border = Rectangle.BOX;
 
-        // Create the content for the box
-        Paragraph text = new Paragraph("This is a square box with text.");
-        text.Alignment = Element.ALIGN_CENTER;
-
         // Add the content to the cell
-        cell2.AddElement(text);
-
+        cell2.AddElement(CreateParagraph("ITL JOLIET\n"));
+        cell2.AddElement(CreateParagraph("Term:     Net 30\n"));
+        cell2.AddElement(CreateParagraph("Order Number:     JOLIB100838\n"));
+        cell2.AddElement(CreateParagraph("Customer Ref:\n"));
+        cell2.AddElement(CreateParagraph("POs:\n"));
         // Add the box cell to the table
         table2.AddCell(cell2);
 
@@ -208,10 +201,20 @@ public class Program
         return cell;
     }
 
+    static Paragraph CreateParagraph(string text) {
+
+        Paragraph content = new Paragraph(text);
+        content.Alignment = Element.ALIGN_LEFT;
+        content.Font.Size = 8;
+
+        return content; 
+
+    }
+
     static PdfPCell GetCustomCell(string text, int fontSize, bool isBold)
     {
         PdfPCell cell = new PdfPCell(new Phrase(text, new Font(Font.FontFamily.HELVETICA, fontSize, isBold ? Font.BOLD : Font.NORMAL)));
-        cell.HorizontalAlignment = Element.ALIGN_CENTER;
+        cell.HorizontalAlignment = Element.ALIGN_LEFT;
         cell.VerticalAlignment = Element.ALIGN_MIDDLE;
         cell.BackgroundColor = BaseColor.WHITE;
         cell.BorderWidth = 0;
